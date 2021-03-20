@@ -606,15 +606,29 @@
           </svg>
         </button>
         <b class="data-title">Оставьте свои данные, мы вам перезвоним</b>
-        <form>
-          <label for="name">Имя</label>
-          <input type="text" name="name" id="name" />
+        <form class="request">
+          <label class="hints" for="name">Имя</label>
+          <input class="client-info" type="text" name="name" id="name" />
 
-          <label for="tel">Телефон</label>
-          <input type="tel" name="tel" id="tel" />
+          <label class="hints" for="tel">Телефон</label>
+          <input class="client-info" type="tel" name="tel" id="tel" />
 
-          <label for="mail">Почта</label>
-          <input type="email" name="mail" id="mail" />
+          <label class="hints" for="mail">Почта</label>
+          <input class="client-info" type="email" name="mail" id="mail" />
+
+          <label class="hints" for="comment">Комментарий</label>
+          <textarea
+            class="client-info comment"
+            name="comment"
+            id="comment"
+            rows="10"
+          ></textarea>
+
+          <label class="agreements" for="policy"
+            >Соглашаюсь с рассылкой и принимаю
+            <a class="contract" href="">Условия договора</a>
+          </label>
+          <input class="check-mark" type="checkbox" name="" id="policy" />
 
           <button class="button-hero send-modal" type="submit">
             Отправить
