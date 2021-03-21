@@ -607,8 +607,20 @@
         </button>
         <b class="data-title">Оставьте свои данные, мы вам перезвоним</b>
         <form class="request">
-          <label class="hints" for="name">Имя</label>
-          <input class="client-info" type="text" name="name" id="name" />
+          <div class="input-box">
+            <input class="client-info" type="text" name="name" id="name" />
+          </div>
+
+          <label class="hints" for="name"
+            >Имя
+            <span class="person-icon">
+              <svg class="person-black-icon" width="18" height="18">
+                <use
+                  href="./img/sprite/symbol-defs.svg#icon-person-black"
+                ></use>
+              </svg>
+            </span>
+          </label>
 
           <label class="hints" for="tel">Телефон</label>
           <input class="client-info" type="tel" name="tel" id="tel" />
@@ -624,11 +636,12 @@
             rows="10"
           ></textarea>
 
-          <label class="agreements" for="policy"
-            >Соглашаюсь с рассылкой и принимаю
+          <label class="agreements">
+            <input class="check-mark" type="checkbox" name="" />
+            <span class="check-mark-custom"></span>
+            Соглашаюсь с рассылкой и принимаю
             <a class="contract" href="">Условия договора</a>
           </label>
-          <input class="check-mark" type="checkbox" name="" id="policy" />
 
           <button class="button-hero send-modal" type="submit">
             Отправить
