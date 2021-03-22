@@ -15,6 +15,8 @@
   --bg-work-content: rgba(47, 48, 58, 0.8);
   --bg-backdrop: rgba(0, 0, 0, 0.2);
   --bg-poject-hover: rgba(33, 150, 243, 0.9);
+  --comment-color: rgba(117, 117, 117, 0.5);
+  --mailing-text-pl: rgba(255, 255, 255, 0.6);
 }
 /* ======глобальнвй сброс======= */
 h1,
@@ -600,6 +602,41 @@ body {
 .footer-list :nth-child(4n) {
   margin-right: 0;
 }
+/* ====== form send footer ====== */
+.mailing {
+  display: flex;
+  margin-top: 20px;
+}
+.mailing-list {
+  margin-left: 93px;
+}
+.mailing-send {
+  padding: 15px 16px;
+
+  width: 358px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  color: var(--mailing-text-pl);
+  background-color: transparent;
+}
+.subscribe-btn {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 0px 12px;
+  padding: 10px 26px;
+}
+.mailing-send::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: var(--mailing-text-pl);
+}
 /*========================= PORTFOLIO =============================*/
 .project {
   padding-top: 94px;
@@ -849,12 +886,16 @@ body {
   transform: translateX(-50%);
 }
 .client-info {
+  padding: 0px 0px 0px 42px;
+
   width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
   cursor: pointer;
+
+  outline: none;
 }
 .hints {
   margin: 10px 0px 4px;
@@ -923,14 +964,28 @@ body {
   top: 50%;
   left: 12px;
   transform: translateY(-50%);
-  color: red;
+  color: var(--name-color);
 }
 .person-black-icon {
   fill: currentColor;
 }
-.client-info:focus ~ .person-icon {
+.client-box:focus-within .person-icon {
   color: var(--bg-button-color);
 }
-input:focus {
-  border-color: red;
+.client-info:focus {
+  border: 1px solid var(--bg-button-color);
+}
+.comment {
+  padding: 12px 16px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: var(--nav-color);
+}
+.comment::placeholder {
+  color: var(--comment-color);
 }
