@@ -854,6 +854,7 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  cursor: pointer;
 }
 .hints {
   margin: 10px 0px 4px;
@@ -873,12 +874,12 @@ body {
   border-radius: 4px;
 }
 .check-mark {
+  position: absolute;
   width: 1px;
   height: 1px;
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-  position: absolute;
 }
 .check-mark-custom {
   display: inline-block;
@@ -914,9 +915,22 @@ body {
 .contract {
   color: var(--bg-button-color);
 }
-.input-box {
+.client-box {
   position: relative;
 }
 .person-icon {
   position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: red;
+}
+.person-black-icon {
+  fill: currentColor;
+}
+.client-info:focus ~ .person-icon {
+  color: var(--bg-button-color);
+}
+input:focus {
+  border-color: red;
 }
