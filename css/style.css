@@ -926,6 +926,9 @@ body {
   background-color: var(--bg-button-color);
   border: transparent;
 }
+.check-mark:focus-visible + .check-mark-custom {
+  box-shadow: 0 0 0 2px var(--bg-footer);
+}
 .agreements {
   display: flex;
   align-items: center;
